@@ -80,7 +80,8 @@
                     <div class="row">      
                         <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                             <a class="logo" href="<?php echo esc_url(home_url('')); ?>"> <img alt="" src="<?php echo bloginfo('template_directory');?>/img/logo-79road.png"></a> 
-                        
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-left">
                             <div class="menu_wrap text-right">
                                 <div class="main-menu">
                                     <nav>
