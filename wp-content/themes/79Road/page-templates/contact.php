@@ -10,54 +10,19 @@
 			<div class="container">					
 				<div class="row">
 					<div class="contact_frm_area text-left col-lg-6 col-md-12 col-xs-12">
-						<h3>Get in Touch</h3>
-						<form action="#">
-							<div class="form-row">
-								<div class="form-group col-sm-6"><input type="text" class="form-control" placeholder="Name*" /></div>
-								<div class="form-group col-sm-6"><input type="text" class="form-control" placeholder="Email*" /></div>
-							</div>
-
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Subject" />
-							</div>
-				
-							<div class="form-group">
-								<textarea name="message" class="form-control" placeholder="Message"></textarea>
-							</div>
-							
-							<div class="input-area submit-area"><button class="btn border-btn" type="submit" >Send Message</button></div>
-							
-						</form>		
-					</div>	
-				
+					<?php echo do_shortcode( '[contact-form-7 id="10" title="Form liên hệ"]' ); ?>
+					</div>					
 					<div class="contact_info col-lg-6 col-md-12 col-xs-12">
-						<h3>Contact Info</h3>
-						<p class="subtitle">
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-						</p>
-						<div class="single_info">
-							<div class="con_icon"><i class="fa fa-map-marker"></i></div>
-							<p>1660 Travis Street <br />Miramar, FL 33025 </p>
-						</div>
-						<div class="single_info">
-							<div class="con_icon"><i class="fa fa-phone"></i></div>
-							<p>Phone : +772-607-0042</p>
-							<p>Fax : +772-607-0042</p>
-						</div>
-						<div class="single_info">
-							<div class="con_icon"><i class="fa fa-envelope"></i></div>
-							<a href="#">RachelSOntiveros@rhyta.com </a> <br />
-							<a href="#">RachelSOntiveros@rhyta.com </a>
-						</div>
-						
+						<?php dynamic_sidebar( 'contact-info' ); ?>
 					</div>
 				</div>
 			</div>
 		
 							
 			<div class="fix">
-				<div id="contact_map_area"></div>
+				<div id="contact_map_area">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.1987734376657!2d109.17897201412839!3d12.234816433927783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31705d8f3840a9bd%3A0xa3bf38b5ea7f156b!2zMzQyIEzDqiBI4buTbmcgUGhvbmcsIFBoxrDhu5tjIEhvw6AsIFRow6BuaCBwaOG7kSBOaGEgVHJhbmcsIEtow6FuaCBIw7JhIDY1MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1593530692284!5m2!1svi!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				</div>
 			</div>	
 				
 		</div>

@@ -275,7 +275,8 @@ input:focus, textarea:focus {
 	outline: none;
 }
 
-.border-btn{
+.border-btn,
+.border-btn.submit-btn {
 	border: 1px solid #D62027;
 	color: #fff;
 	background: #D62027;
@@ -284,13 +285,29 @@ input:focus, textarea:focus {
 	text-transform: capitalize;
 	transition: .5s;
 }
+.border-btn.submit-btn {
+	width: auto;
+}
 .border-btn:hover,
-.border-btn:focus{
+.border-btn.submit-btn:hover,
+.border-btn:focus,
+.border-btn.submit-btn:focus{
 	background: #222;
 	border-color: #222;
 	color: #fff;
 }
-
+.contact_frm_area .form:before, .contact_frm_area .form:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+.contact_frm_area div.wpcf7-validation-errors, 
+.contact_frm_area div.wpcf7-acceptance-missing {
+    border: 2px solid #d62027;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
 
 /* -------- Preloader Css -------- */
 
