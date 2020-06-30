@@ -1374,8 +1374,10 @@ header .logo img {
 	padding-bottom: 20px;
 	background: #fff;
 	transition: .5s;
+	display: block;
 }
-.single_product:hover{
+
+.single_product:hover {
 	box-shadow: 5px 5px 25px rgba(0,0,0,0.03);
 }
 .product_image{
@@ -1385,13 +1387,18 @@ header .logo img {
 .product_image img{
     width: 100%;
     height: auto;
-    transition: all 1.5s ease 0s;
-	
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+	transition: all 0.6s ease;
 }
 
-.single_product:hover img{
-    transform: scale(1.2);
+.single_product:hover img {
+	transform: rotateY(180deg);
 }
+
+/* .single_product:hover img{
+    transform: scale(1.2);
+} */
 .single_product .box-content{
     width: 100%;
     padding: 17px 10px;
@@ -1566,7 +1573,7 @@ header .logo img {
 }
 .testimonial .testimonial-title{
     font-size: 18px;
-    color: #4f4f4f;
+    color: #D62027;
     text-transform: capitalize;
     display: inline-block;
 	font-family: 'Handlee', cursive;

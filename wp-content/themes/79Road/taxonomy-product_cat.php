@@ -43,11 +43,13 @@
                     <div class="col-lg-3 col-md-4 col-sm-6 col-6">
                         <div class="single_product">
                             <div class="product_image">
-                                <img src="<?php the_post_thumbnail_url( '' ); ?>" alt=""/>
+                                <a href="<?php echo get_the_permalink(); ?>">
+                                            <img src="<?php the_post_thumbnail_url( '' ); ?>" alt=""/>
+                                </a>
                                 <!-- <div class="new_badge">New</div> -->
                                 <div class="box-content">
                                     <!-- <a href="#"><i class="fa fa-heart-o"></i></a> -->
-                                    <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                    <!-- <a href="#"><i class="fa fa-cart-plus"></i></a> -->
                                     <a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-search"></i></a>
                                 </div>                                      
                             </div>

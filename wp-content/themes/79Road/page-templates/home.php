@@ -179,11 +179,13 @@
                             <div class="col-lg-3 col-md-4 col-sm-6 col-6 mix <?php echo $term->slug; ?>">
                                 <div class="single_product">
                                     <div class="product_image">
-                                        <img src="<?php the_post_thumbnail_url( '' ); ?>" alt=""/>
+                                        <a href="<?php echo get_the_permalink(); ?>">
+                                            <img src="<?php the_post_thumbnail_url( '' ); ?>" alt=""/>
+                                        </a>
                                         <!-- <div class="new_badge">New</div> -->
                                         <div class="box-content">
                                             <!-- <a href="#"><i class="fa fa-heart-o"></i></a> -->
-                                            <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                            <!-- <a href="#"><i class="fa fa-cart-plus"></i></a> -->
                                             <a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-search"></i></a>
                                         </div>                                      
                                     </div>
@@ -212,7 +214,7 @@
                 </div>
             </div>
         </section>
-        <section id="testimonials" class="testimonials_area section_padding" style="background: url(<?php echo bloginfo('template_directory');?>/img/testimonial-bg.jpg); background-size: cover; background-attachment: fixed;">
+        <section id="testimonials" class="testimonials_area section_padding" style="background: url(<?php echo bloginfo('template_directory');?>/img/background-testimonials.jpg); background-size: cover; background-attachment: fixed;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
