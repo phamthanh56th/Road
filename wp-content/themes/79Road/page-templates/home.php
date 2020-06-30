@@ -279,7 +279,7 @@
                     <?php $my_query = new WP_Query($args); ?>
                     <?php if( $my_query->have_posts() ) : ?>
                     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <div class="single_blog">
                             <div class="single_blog_img">
                                 <img src="<?php the_post_thumbnail_url(''); ?>" alt="">

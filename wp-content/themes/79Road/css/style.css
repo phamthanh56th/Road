@@ -499,7 +499,6 @@ input:focus, textarea:focus {
 
 header .logo img {
 	height: 130px;
-	padding-left: 30px;
 }
 .hdr_tp_left, 
 .hdr_tp_right {
@@ -792,40 +791,6 @@ header .logo img {
 }
 .main-menu nav a:hover {
 	color: #606060;
-}
-/* Sub Menu */
-.sub-menu {
-	background: #fff none repeat scroll 0 0;
-	box-shadow: 0 0px 7px rgba(0,0,0,0.05);
-	border: 1px solid rgba(0,0,0,0.04);
-	opacity: 0;
-	padding: 12px 11px;
-	position: absolute;
-	text-align: left;
-	top: 120px;
-	visibility: hidden;
-	width: 200px;
-	z-index: -999;
-	transition: .5s;
-}
-.main-menu nav > ul > li:hover .sub-menu {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-  z-index: 999;
-}
-.sub-menu li{}
-.sub-menu li a {
-  color: #606060;
-  display: block;
-  line-height: 31px;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 0 10px;
-  font-weight: 400;
-}
-.sub-menu li a:hover {
-  padding-left: 18px;
 }
 /* Mega Menu */
 .mega-menu {
@@ -3215,10 +3180,6 @@ header .logo img {
 	padding-left: 30px;
 }
 
-body.home .header_top_area {
-    background: transparent;
-}
-
 body.home .header_top_area i{
 	color: #fff;
 }
@@ -3312,6 +3273,48 @@ body.home .header_top_area .hdr_tp_right i.fa-caret-down {
 	#promo_area .row > div:nth-child(2n+2) {
 		padding-left: 0;
 	}
+
+	/* Sub Menu */
+	.sub-menu {
+		background: #fff none repeat scroll 0 0;
+		box-shadow: 0 0px 7px rgba(0,0,0,0.05);
+		border: 1px solid rgba(0,0,0,0.04);
+		opacity: 0;
+		padding: 12px 11px;
+		position: absolute;
+		text-align: left;
+		top: 120px;
+		visibility: hidden;
+		width: 200px;
+		z-index: -999;
+		transition: .5s;
+	}
+	.main-menu nav > ul > li:hover .sub-menu {
+		opacity: 1;
+		top: 100%;
+		visibility: visible;
+		z-index: 999;
+	}
+	.sub-menu li a {
+		color: #606060;
+		display: block;
+		line-height: 31px;
+		font-size: 12px;
+		text-transform: uppercase;
+		padding: 0 10px;
+		font-weight: 400;
+	}
+	.sub-menu li a:hover {
+		padding-left: 18px;
+	}
+
+	body.home .header_top_area {
+		background: transparent;
+	}
+
+	header .logo img {
+		padding-left: 30px;
+	}
 }
 
 @media(max-width: 767px) {
@@ -3321,5 +3324,13 @@ body.home .header_top_area .hdr_tp_right i.fa-caret-down {
 
 	.process_area .row > div:not(:first-child)::before {
 		display: none;
+	}
+
+	.right_menu .search_icon{
+		border-right: 1px solid #D62027;
+	}
+
+	.right_menu i {
+		color: #D62027;
 	}
 }
