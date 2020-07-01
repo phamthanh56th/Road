@@ -510,7 +510,7 @@ input:focus, textarea:focus {
 	font-size: 13px;
 	background: #4f4f4f;
 	font-weight: 500;
-	padding: 8px 0 0;
+	padding: 8px 0;
 	margin-bottom: 10px;
 }
 
@@ -3250,6 +3250,13 @@ body.home .header_top_area .hdr_tp_right i.fa-caret-down {
 	padding-top: 0;
 }
 
+.woocommerce div.product form.cart .reset_variations {
+	display: none !important;
+}
+
+.padding-page {
+	padding-top: 50px;
+}
 
 @media(min-width: 768px) {
 	body.home #header_area {

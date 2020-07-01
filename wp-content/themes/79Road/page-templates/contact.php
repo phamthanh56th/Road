@@ -6,7 +6,7 @@
 	*/ 
 ?>
 <?php get_header(); ?>
-		<div class="contact_page_area fix">
+		<div class="contact_page_area padding-page fix">
 			<div class="container">					
 				<div class="row">
 					<div class="contact_frm_area text-left col-lg-6 col-md-12 col-xs-12">

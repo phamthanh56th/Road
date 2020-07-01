@@ -1,5 +1,5 @@
 <!-- Blog Sidebar -->
-<div class="col-md-4 col-xs-12">							
+<!-- <div class="col-md-4 col-xs-12">							
 	<div class="single_sidebar search_widget">
 		<h3 class="sdbr_title">Tìm kiếm</h3>
 		<div class="sdbr_inner">
@@ -30,7 +30,7 @@
 				<?php } ?>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- <div class="single_sidebar popular_post">
 		<h3 class="sdbr_title">popular post</h3>
@@ -71,5 +71,5 @@
 			<a href="#">Most Recent</a>
 		</div>
 	</div> -->
-</div>
+<!-- </div> -->
 <!-- End Blog Sidebar -->
