@@ -88,6 +88,8 @@
 
         <script src="<?php echo bloginfo('template_directory');?>/js/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+<!--         <script src="https://cdn.jsdelivr.net/gh/igorlino/elevatezoom-plus@1.2.3/src/jquery.ez-plus.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script> -->
         <script src="<?php echo bloginfo('template_directory');?>/js/bootstrap.min.js"></script>
         <script src="<?php echo bloginfo('template_directory');?>/js/jquery.meanmenu.min.js"></script>
         <script src="<?php echo bloginfo('template_directory');?>/js/jquery.mixitup.js"></script>
@@ -97,6 +99,7 @@
         <script src="<?php echo bloginfo('template_directory');?>/js/venobox.min.js"></script>
         <script src="<?php echo bloginfo('template_directory');?>/js/owl.carousel.min.js"></script>
         <script src="<?php echo bloginfo('template_directory');?>/js/simplePlayer.js"></script>
+
         <script src="<?php echo bloginfo('template_directory');?>/js/main.js"></script>
     </body>
 </html>

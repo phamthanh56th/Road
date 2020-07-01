@@ -112,7 +112,10 @@
                                                 </div>
 
                                             </div>
-                                        </li>                                        
+                                        </li>    
+                                        <!-- <li class="cart">
+                                             <?php //woocommerce_mini_cart();  ?>
+                                        </li>  -->                                    
                                         <!-- <li>
                                             <div class="cart_menu_area">
                                                 <div class="cart_icon">
@@ -123,7 +126,7 @@
                                                 <div class="mini-cart-wrapper">
                                                     <div class="mc-pro-list fix">
                                                         <div class="mc-sin-pro fix">
-                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php echo bloginfo('template_directory');?>/img/mini-cart/1.jpg" alt="" /></a>
+                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php //echo bloginfo('template_directory');?>/img/mini-cart/1.jpg" alt="" /></a>
                                                             <div class="mc-pro-details fix">
                                                                 <a href="#">This is Product Name</a>
                                                                 <span>1x$25.00</span>
@@ -131,8 +134,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="mc-sin-pro fix">
-                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php echo bloginfo('template_directory');?>/img/mini-cart/2.jpg" alt="" /></a>
-                                                            <div class="mc-pro-details fix">
+                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php //echo bloginfo('template_directory');?>/img/mini-cart/2.jpg" alt="" /></a>
+                                                            <div class="mc-pro-details fix">/
                                                                 <a href="#">This is Product Name</a>
                                                                 <span>1x$25.00</span>
                                                                 <a class="pro-del" href="#"><i class="fa fa-times-circle"></i></a>
@@ -187,7 +190,10 @@
                                                 </div>
 
                                             </div>
-                                        </li>                                        
+                                        </li>
+                                        <!-- <li class="cart">
+                                             <?php //woocommerce_mini_cart();  ?>
+                                        </li>   -->                                      
                                         <!-- <li>
                                             <div class="cart_menu_area">
                                                 <div class="cart_icon">
@@ -198,7 +204,7 @@
                                                 <div class="mini-cart-wrapper">
                                                     <div class="mc-pro-list fix">
                                                         <div class="mc-sin-pro fix">
-                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php echo bloginfo('template_directory');?>/img/mini-cart/1.jpg" alt="" /></a>
+                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php //echo bloginfo('template_directory');?>/img/mini-cart/1.jpg" alt="" /></a>
                                                             <div class="mc-pro-details fix">
                                                                 <a href="#">This is Product Name</a>
                                                                 <span>1x$25.00</span>
@@ -206,7 +212,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="mc-sin-pro fix">
-                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php echo bloginfo('template_directory');?>/img/mini-cart/2.jpg" alt="" /></a>
+                                                            <a href="#" class="mc-pro-image float-left"><img src="<?php //echo bloginfo('template_directory');?>/img/mini-cart/2.jpg" alt="" /></a>
                                                             <div class="mc-pro-details fix">
                                                                 <a href="#">This is Product Name</a>
                                                                 <span>1x$25.00</span>

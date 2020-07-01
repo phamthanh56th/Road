@@ -3,6 +3,9 @@
 	add_theme_support( 'post-thumbnails' );
 	add_post_type_support( 'page', 'excerpt' );
 	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' ); 
+	add_theme_support( 'wc-product-gallery-lightbox' ); 
+	 add_theme_support( 'wc-product-gallery-slider' ); 
 	add_image_size( 'custom-size', 100, 100, true );
 
 
@@ -304,3 +307,4 @@
 		$fragments['div.aa-cartbox-summary'] = ob_get_clean(); 
 		return $fragments;
 	}
+
