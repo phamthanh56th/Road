@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>79 Road Shop</title>
+    <link rel="icon" type="image/png" href="<?php echo bloginfo('template_directory');?>/img/favicon/79road.ico"/>
+    <!-- <link rel="icon" type="image/png" href="https://example.com/favicon.png"/> -->
     <title><?php wp_title(); ?></title>
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800" rel="stylesheet">  -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +19,7 @@
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/bootstrap.min.css" />  
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/style.css" />
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/responsive.css?v=<?php echo time(); ?>" /> 
-    <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/customsize.css?v=<?php echo time(); ?>" /> 
+    <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/customsize.css?v=<?php echo time(); ?>" />
 </head>
 <?php wp_head(); ?>
     <body <?php echo body_class( '' ); ?>>
