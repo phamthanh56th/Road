@@ -2,7 +2,7 @@
             <div class="footer-main">
                 <div class="container">
                     <div class="row">               
-                        <div class="col-md-3 col-12 mb-md-0 mb-4">
+                        <div class="col-lg-3 col-md-5 col-12 mb-md-0 mb-4">
                             <div class="single_ftr">
                                 <img class="mb-4" src="<?php echo bloginfo('template_directory');?>/img/logo-79road.png">
                                 <ul>
@@ -13,9 +13,9 @@
                             </div>
                         </div> <!--  End Col -->
                         
-                        <div class="col-md-9 col-12">
+                        <div class="col-lg-9 col-md-7 col-12">
                             <div class="row">
-                                <div class="col-md-6 col-12 mb-md-0 mb-4">
+                                <div class="col-lg-6 col-12 mb-lg-0 mb-4">
                                     <div class="single_ftr">
                                         <h4 class="sf_title">DỊCH VỤ KHÁCH HÀNG</h4>
                                         <?php
@@ -30,10 +30,10 @@
                                     </div>
                                 </div> <!--  End Col -->    
                                 
-                                <div class="col-md-6 col-12 mb-md-0 mb-4">
+                                <div class="col-lg-6 col-12 mb-md-0 mb-4">
                                     <div class="single_ftr">
                                         <h4 class="sf_title">LIKE & FOLLOW TRÊN MẠNG XÃ HỘI</h4>
-                                        <div class="ftr_social_icon text-lg-left text-center mb-4">
+                                        <div class="ftr_social_icon text-left mb-4">
                                             <?php dynamic_sidebar( 'social' ); ?>
                                         </div>
                                         <div class="newsletter_form">
