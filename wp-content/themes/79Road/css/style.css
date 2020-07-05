@@ -807,7 +807,7 @@ header .logo img {
   margin-left: 4px;
 }
 .main-menu nav a:hover {
-	color: #606060;
+	color: #bababa;
 }
 /* Mega Menu */
 .mega-menu {
@@ -1591,6 +1591,7 @@ header .logo img {
 }
 .single_blog {
 	margin-bottom:30px;
+	display: block;
 }
 .single_blog_img {
     position: relative;	
@@ -1639,8 +1640,8 @@ header .logo img {
 	margin-right: 6px;
 }
 .single_blog{
-	box-shadow: 1px 1px 8px rgba(0,0,0,0.02);
-	border: 1px solid rgba(0,0,0,0.02);
+	/* box-shadow: 1px 1px 8px rgba(0,0,0,0.02);
+	border: 1px solid rgba(0,0,0,0.02); */
 }
 .single_blog .blog_content {
 	display: inline-block;
@@ -3256,6 +3257,25 @@ body.home .header_top_area .hdr_tp_right i.fa-caret-down {
 
 .padding-page {
 	padding-top: 50px;
+}
+
+.woocommerce-variation-add-to-cart {
+	display: none !important;
+}
+
+.woocommerce div.product .product_title {
+	font-size: 32px;
+}
+
+.woocommerce div.product p.price, 
+.woocommerce div.product span.price {
+	color: #D62027 !important;
+	font-weight: bold;
+	font-size: 25px !important;
+}
+
+.woocommerce div.product .cart .variations tr {
+	margin-bottom: 12px;
 }
 
 @media(min-width: 768px) {

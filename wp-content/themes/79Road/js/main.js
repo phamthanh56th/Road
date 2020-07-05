@@ -173,7 +173,14 @@ jQuery(document).ready(function(){
 
 
 	// jQuery MixItUp
-	$('.product_item').mixItUp();
+	var product_filter = $('.product_filter ul');
+	var slug = product_filter.children('li').attr('data-filter');
+	console.log(slug);
+	$('.product_item').mixItUp({
+		load: {
+			filter: slug,
+		},
+	});
 	
 	 // Vide Section
 	$("#video").simplePlayer();

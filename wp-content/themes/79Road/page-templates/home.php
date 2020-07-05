@@ -115,7 +115,6 @@
                 <div class="text-center">
                     <div class="product_filter">
                         <ul>
-                            <li class=" active filter" data-filter="all">ALL</li>
                             <?php
                             $taxonomy = 'product_cat';
                             $term_args = array(
@@ -130,7 +129,7 @@
                             );
                             $tax_terms = get_terms($taxonomy, $term_args);
                             foreach ($tax_terms as $key => $term) { ?>
-                            <li class="filter <?php echo $key; ?> <?php if($key==0) echo 'active'; ?>" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></li>
+                            <li class="filter <?php echo $key; ?>" data-filter=".<?php echo $term->slug; ?>"><?php echo $term->name; ?></li>
                             <?php } ?>
                         </ul>
                     </div>
@@ -280,7 +279,7 @@
                     <?php if( $my_query->have_posts() ) : ?>
                     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
                     <div class="col-lg-4 col-md-6 col-12">
-                        <div class="single_blog">
+                        <a href="<?php echo get_the_permalink(); ?>" class="single_blog">
                             <div class="single_blog_img">
                                 <img src="<?php the_post_thumbnail_url(''); ?>" alt="">
                                 <div class="blog_date text-center">
@@ -290,7 +289,7 @@
                             </div>                
                             <div class="blog_content">  
                                 <h4 class="post_title">
-                                    <a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <?php the_title(); ?>
                                 </h4>
                                 <!-- <ul class="post-bar">
                                     <li><i class="fa fa-user"></i> Admin</li>                                   
@@ -299,7 +298,7 @@
                                 </ul>                            -->
                                 <!-- <p>Đối với những người mê rong ruổi và trải nghiệm, có lẽ đôi găng ....</p> -->
                             </div>
-                        </div>
+                        </a>
                     </div>                
                     <?php endwhile; wp_reset_postdata(); endif;  ?>
                 </div>

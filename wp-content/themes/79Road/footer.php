@@ -2,7 +2,7 @@
             <div class="footer-main">
                 <div class="container">
                     <div class="row">               
-                        <div class="col-md-3 col-sm-6 col-12 mb-md-0 mb-4">
+                        <div class="col-md-3 col-12 mb-md-0 mb-4">
                             <div class="single_ftr">
                                 <img class="mb-4" src="<?php echo bloginfo('template_directory');?>/img/logo-79road.png">
                                 <ul>
@@ -17,22 +17,27 @@
                             <div class="row">
                                 <div class="col-md-6 col-12 mb-md-0 mb-4">
                                     <div class="single_ftr">
-                                        <h4 class="sf_title">Services</h4>
-                                        <ul>
-                                            <li><a href="#">Returns</a></li>
-                                            <li><a href="#">Site Map</a></li>
-                                            <li><a href="#">Wish List</a></li>
-                                            <li><a href="#">My Account</a></li>
-                                            <li><a href="#">Order History</a></li>
-                                        </ul>
+                                        <h4 class="sf_title">DỊCH VỤ KHÁCH HÀNG</h4>
+                                        <?php
+                                            $args = array(
+                                                'theme_location' => 'footer-menu',
+                                                'container' => '',
+                                                'menu_id' => '',
+                                                'menu_class' => '',
+                                            );
+                                            wp_nav_menu( $args );
+                                        ?>
                                     </div>
                                 </div> <!--  End Col -->    
                                 
                                 <div class="col-md-6 col-12 mb-md-0 mb-4">
                                     <div class="single_ftr">
-                                        <h4 class="sf_title">Newsletter</h4>
+                                        <h4 class="sf_title">LIKE & FOLLOW TRÊN MẠNG XÃ HỘI</h4>
+                                        <div class="ftr_social_icon text-lg-left text-center mb-4">
+                                            <?php dynamic_sidebar( 'social' ); ?>
+                                        </div>
                                         <div class="newsletter_form">
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have </p>
+                                            <p class="font-weight-bold">ĐĂNG KÝ NHẬN TIN</p>
                                             <form method="post" class="form-inline">                
                                                 <input name="EMAIL" id="email" placeholder="Enter Your Email" class="form-control" type="email">
                                                 <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
@@ -49,16 +54,16 @@
                 <div class="ftr_btm_area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4 col-md-12 col-12 mb-lg-0 mb-2">
+                            <!-- <div class="col-lg-4 col-md-12 col-12 mb-lg-0 mb-2">
                                 <div class="ftr_social_icon text-lg-left text-center">
                                     <?php dynamic_sidebar( 'social' ); ?>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-12 col-12 mb-lg-0 mb-3">
+                            </div> -->
+                            <div class="col-12 mb-lg-0 mb-3">
                                 <p class="copyright_text text-center">&copy; 2020 All Rights Road 79 Shop</p>
                             </div>
                             
-                            <div class="col-lg-4 col-md-12 col-12">
+                            <!-- <div class="col-lg-4 col-md-12 col-12">
                                 <div class="payment_mthd_icon text-lg-right text-center">
                                     <ul>
                                         <li><i class="fab fa-paypal"></i></li>
@@ -68,7 +73,7 @@
                                         <li><i class="fab fa-cc-amex"></i></i></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

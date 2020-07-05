@@ -23,6 +23,7 @@
 	function register_my_menus() {
 		$args = array( 
 			'main-menu' => __( 'Main Menu' ),
+			'footer-menu' => __( 'Footer Menu' ),
 		);
 		register_nav_menus( $args );
 		}
