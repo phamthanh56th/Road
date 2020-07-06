@@ -14,9 +14,19 @@
     $al_cat_slug = get_queried_object()->slug;
     $al_cat_name = get_queried_object()->name;
 ?>
+
 <section id="product_area" class="section_padding">
+    <div id="page_item_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-left">
+                    <h3><?php echo $al_cat_name; ?></h3>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">     
-    <h3><?php echo $al_cat_name; ?></h3>
+        
         <div class="text-center">           
             <div class="product_item">
                 <div class="row">   
