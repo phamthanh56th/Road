@@ -19,6 +19,9 @@
 		    ?>
 		    <!-- the loop -->
 		    <div class="row">
+                <div class="col-md-12">
+                    <h1 class="search-title"><?php printf( __( 'Kết Quả Tìm Kiếm: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+                </div>
 		    	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 		    		<?php $price = get_post_meta( get_the_ID(), '_regular_price', true);
                     $pid = $post->ID;

@@ -91,6 +91,129 @@ global $product; ?>
 					</div>
 				</div>
 			</div>
+			
+			<div class="col-md-12">
+				<div class="product-related">
+					<h3>Sản Phẩm Liên Quan</h3>
+				</div>
+			</div>
+			<div class="row">
+				<?php  
+					$id = $product->get_id();
+					$taxonomy = 'product_cat';
+					//$related_tag = wp_get_object_terms( $post->ID, 'product_tag', array('fields' => 'ids'));
+	    			$related_cat_id = wp_get_object_terms( $id, 'product_cat', array('fields' => 'ids'));
+	    			//$aa = wp_get_post_terms($id, $taxonomy,  array("fields" => "ids"));
+					$args1 = array(
+			        'post_type' => 'product',
+			        'post_status' => 'publish',
+			        'posts_per_page' => -1,
+			        'orderby' => 'rand',
+			        'post__not_in' => array ($id),
+			        'tax_query' => array(
+			            array(
+			                'taxonomy'     => $taxonomy,
+			                'field'        => 'id',
+			                'terms'        =>  $related_cat_id,
+			            	),
+			        	),
+			        )
+			        
+				?>
+				<!-- <?php //print_r($related_cat_id); ?> -->
+				<?php  
+					$query = new WP_Query( $args1 );
+	                if ( $query->have_posts() ): 
+	            ?>
+		    	<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+		    		<?php $price = get_post_meta( get_the_ID(), '_regular_price', true);
+	                $pid = $post->ID;
+	                $product = new WC_Product( $pid ); ?>
+		    		<div class="col-lg-3 col-md-4 col-sm-6 col-6">
+	                    <div class="single_product">
+	                        <div class="product_image">
+	                            <a href="<?php echo get_the_permalink(); ?>">
+	                                <img src="<?php the_post_thumbnail_url( '' ); ?>" alt=""/>
+	                            </a>
+	                            <!-- <div class="new_badge">New</div> -->
+	                            <div class="box-content">
+	                                <!-- <a href="#"><i class="fa fa-heart-o"></i></a> -->
+	                                <!-- <a href="#"><i class="fa fa-cart-plus"></i></a> -->
+	                                <a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-search"></i></a>
+	                            </div>                                      
+	                        </div>
+
+	                        <div class="product_btm_text">
+	                            <h4><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h4>
+	                            <!-- <div class="p_rating">
+	                                <i class="fa fa-star"></i>
+	                                <i class="fa fa-star"></i>
+	                                <i class="fa fa-star"></i>
+	                                <i class="fa fa-star"></i>
+	                                <i class="fa fa-star"></i>
+	                            </div>                                       -->
+	                            <span class="price"><?php echo $product->get_price_html(); ?></span>
+	                             <!-- <?php //echo do_shortcode( '[add_to_cart id=' . $id . ']' ) ?> -->
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+		    	<?php endwhile; wp_reset_postdata(); endif; ?>
+		    </div>
+			<?php 
+			global $woocommerce;
+			$viewed_products = ! empty( $_COOKIE['woocommerce_recently_viewed'] ) ? (array) explode( '|', $_COOKIE['woocommerce_recently_viewed'] ) : array();
+			$viewed_products = array_filter( array_map( 'absint', $viewed_products ) );
+			?>
+			<?php if($viewed_products) { ?>
+			<?php 
+			$query_args = array(
+			    'posts_per_page' => 4,
+			    'post_status'    => 'publish', 
+			    'post_type'      => 'product', 
+			    'post__in'       => $viewed_products, 
+			    'orderby'        => 'rand'
+			);
+			$query_args['meta_query'] = array();
+			$query_args['meta_query'][] = $woocommerce->query->stock_status_meta_query();
+			$r = new WP_Query($query_args);
+			if ( $r->have_posts() ) {
+			    ?>
+			    <div class="col-md-12">
+					<div class="product-related">
+						<h3>Sản Phẩm Vừa Xem</h3>
+					</div>
+				</div>
+			    <?php 
+			    while ( $r->have_posts() ) { $r->the_post(); ?>
+			    	<div class="col-lg-3 col-md-4 col-sm-6 col-6">
+	                    <div class="single_product">
+	                        <div class="product_image">
+	                            <a href="<?php echo get_the_permalink(); ?>">
+	                                <img src="<?php the_post_thumbnail_url( '' ); ?>" alt=""/>
+	                            </a>
+	                            <!-- <div class="new_badge">New</div> -->
+	                            <div class="box-content">
+	                                <!-- <a href="#"><i class="fa fa-heart-o"></i></a> -->
+	                                <!-- <a href="#"><i class="fa fa-cart-plus"></i></a> -->
+	                                <a href="<?php echo get_the_permalink(); ?>"><i class="fa fa-search"></i></a>
+	                            </div>                                      
+	                        </div>
+
+	                        <div class="product_btm_text">
+	                            <h4>
+	                            	<a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a>
+	                            </h4>
+	                        </div>
+                            <span class="price"><?php echo $product->get_price_html(); ?></span>
+                            <!-- <?php //echo do_shortcode( '[add_to_cart id=' . $id . ']' ) ?> -->
+                        </div>
+                    </div>			        
+			    <?php }
+			}; 
+			wp_reset_postdata();
+			?>
+			<?php } ?>
 		</div>
 	</div>
 </div>

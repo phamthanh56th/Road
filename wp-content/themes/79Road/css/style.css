@@ -973,7 +973,7 @@ header .logo img {
 	text-transform: uppercase;
 	font-size: 22px;
 	margin-bottom: 18px;
-	
+	line-height: normal;
 }
 .slider_content h1 {
 	color: #D62027;
@@ -1906,7 +1906,7 @@ header .logo img {
 /* -------- Page item css -------- */
 
 #page_item_area {
-	padding: 45px 0;
+	padding: 100px 0;
 	margin-bottom: 40px;
 	background: #2F2F2F;
 }
@@ -3358,6 +3358,18 @@ body.home .header_top_area .hdr_tp_right i.fa-caret-down {
 
 	header .logo img {
 		padding-left: 30px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 952px) {
+	.menu_wrap {
+		margin-right: -45px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 870px) {
+	.menu_wrap {
+		margin-right: -65px;
 	}
 }
 

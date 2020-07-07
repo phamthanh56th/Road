@@ -38,10 +38,7 @@
                                         </div>
                                         <div class="newsletter_form">
                                             <p class="font-weight-bold">ĐĂNG KÝ NHẬN TIN</p>
-                                            <form method="post" class="form-inline">                
-                                                <input name="EMAIL" id="email" placeholder="Enter Your Email" class="form-control" type="email">
-                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                            </form>
+                                            <?php echo do_shortcode('[contact-form-7 id="123" title="Form liên hệ footer"]'); ?>
                                         </div>
                                     </div>
                                 </div> <!--  End Col -->

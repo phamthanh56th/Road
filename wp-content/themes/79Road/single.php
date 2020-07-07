@@ -26,7 +26,51 @@ the_post();?>
 					</div>
 				</div>		
 			</div>
-			<?php get_sidebar(); ?>
+			<div class="col-md-12">
+			<?php
+				global $post;
+				//$current_post_type = get_post_type( $post );
+				$args = array(
+				    'order' => 'DESC',
+				    'orderby' => 'ID',
+				    'post_type' => 'post',
+				    'posts_per_page' => 3,
+				    'post__not_in' => array( $post->ID )
+				);
+				$rel_query = new WP_Query( $args );
+				if( $rel_query->have_posts() ) : 
+				?>
+				<div class="recent-related">
+					<h3>Bài Viết Liên Quan</h3>
+				</div>
+				<div class="post-related">
+				    <div class="row">
+					<?php
+					    while ( $rel_query->have_posts() ) :
+					    $rel_query->the_post(); ?>
+				        <div class="col-lg-4 col-md-6 col-12">
+	                        <a href="<?php echo get_the_permalink(); ?>" class="single_blog">
+	                            <div class="single_blog_img">
+	                                <img src="<?php the_post_thumbnail_url(''); ?>" alt="">
+	                                <div class="blog_date text-center">
+	                                    <div class="bd_day"><?php echo get_the_date( 'd' ) ?></div>
+	                                    <div class="bd_month"><?php echo get_the_date( 'M' ) ?></div>
+	                                </div>
+	                            </div>                
+	                            <div class="blog_content">  
+	                                <h4 class="post_title">
+	                                    <?php the_title(); ?>
+	                                </h4>
+	                            </div>
+	                        </a>
+	                    </div> 
+					<?php endwhile; ?>
+				    </div>
+				</div>
+				<?php
+				endif; wp_reset_query(); ?>
+			</div>
+			<!-- <?php //get_sidebar(); ?> -->
 		</div>					
 	</div>
 </div>
