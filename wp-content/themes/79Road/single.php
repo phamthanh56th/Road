@@ -19,6 +19,7 @@ the_post();?>
 						<div class="col-md-8 col-12">
 							<?php if(!empty(get_the_content())): ?>
 							<div class="blog_content">
+								<h3><?php the_title(); ?></h3>
 								<?php echo get_the_content(); ?>
 							</div>
 							<?php endif; ?>	
