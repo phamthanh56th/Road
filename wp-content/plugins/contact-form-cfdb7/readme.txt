@@ -57,6 +57,9 @@ Extensions : [Contact form 7 more Add-ons](https://ciphercoin.com/contact-form-7
 
 == Changelog ==
 
+= 1.2.4.9 =
+Solved upload file issue 
+
 = 1.2.4.8 =
 Removed unwanted data  
 Removed data with key underscore (_)

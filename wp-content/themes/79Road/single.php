@@ -17,11 +17,12 @@ the_post();?>
 							</div>
 						</div>
 						<div class="col-md-8 col-12">
-							<?php if(!empty(get_the_content())): ?>
 							<div class="blog_content">
-								<?php echo get_the_content(); ?>
+								<h3><?php the_title(); ?></h3>
+								<?php if(!empty(get_the_content())): ?>
+									<?php echo get_the_content(); ?>
+								<?php endif; ?>	
 							</div>
-							<?php endif; ?>	
 						</div>
 					</div>
 				</div>		
