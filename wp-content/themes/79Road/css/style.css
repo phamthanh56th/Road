@@ -1423,7 +1423,7 @@ header .logo img {
 	font-size: 13px;
 }
 .product_btm_text h4 {
-	text-transform: capitalize;
+	text-transform: uppercase;
 	margin-top: 17px;
 	margin-bottom: 6px;
 	font-size: 17px;
@@ -1909,6 +1909,7 @@ header .logo img {
 	padding: 100px 0;
 	margin-bottom: 40px;
 	background: #2F2F2F;
+	margin-top: 10px;
 }
 .p_items li {
 	display: inline-block;
@@ -3276,6 +3277,108 @@ body.home .header_top_area .hdr_tp_right i.fa-caret-down {
 
 .woocommerce div.product .cart .variations tr {
 	margin-bottom: 12px;
+}
+
+.wpcf7-form .wpcf7-submit {
+	display: none;
+}
+
+.wpcf7-form .fa-search {
+	position: absolute;
+    right: 32px;
+    top: 17px;
+    font-size: 17px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	background: #303030 !important;
+	border-bottom-color: #303030 !important;
+	border-radius: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	background-color: #979797 !important;
+	border: none !important;
+	border-radius: 0 !important;
+	margin: 0 -2px !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after {
+	display: none !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+	color: #fff !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	padding: 0 !important;
+}
+
+.title-product-related.wrap-box-right {
+	background: #303030 !important;
+    padding: 7.5px 10px;
+}
+
+.title-product-related.wrap-box-right h3 {
+	color: #fff;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.border-product-related > .wrap-product-related {
+	border: 1px solid #303030;
+	padding-bottom: 5px;
+}
+
+.product-related-item {
+	display: flex;
+}
+
+.product-related-item .product-related-image {
+	width: 33.33%;
+	overflow: hidden;
+}
+
+.product-related-text {
+	width: calc(100% - 33.33%);
+    padding-left: 10px;
+    color: #000;
+}
+
+.product-related-text p {
+	text-transform: uppercase;
+}
+
+.product-related-item {
+	margin-bottom: 15px;
+}
+
+.product-related-item:first-child {
+	margin-top: 15px;
+}
+
+.product-related-item:hover .product-related-image img {
+	transform: scale(1.2);
+}
+
+.woocomerce-detail .search-box {
+	position: unset;
+    display: block;
+    width: 100%;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.woocomerce-detail .search-box .form-control {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.woocomerce-detail .search-box button[type="submit"] {
+    right: 0;
 }
 
 @media(min-width: 768px) {
