@@ -10,10 +10,10 @@ the_post();?>
 						<div class="col-md-4 col-12">
 							<div class="single_blog_img">
 								<img src="<?php the_post_thumbnail_url(''); ?>" alt="">
-								<div class="blog_date text-center">
+								<!-- <div class="blog_date text-center">
 									<div class="bd_day"><?php echo get_the_date( 'd' ) ?></div>
 									<div class="bd_month"><?php echo get_the_date( 'M' ) ?></div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="col-md-8 col-12">
@@ -26,7 +26,7 @@ the_post();?>
 					</div>
 				</div>		
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 mt-3">
 			<?php
 				global $post;
 				//$current_post_type = get_post_type( $post );
@@ -40,7 +40,7 @@ the_post();?>
 				$rel_query = new WP_Query( $args );
 				if( $rel_query->have_posts() ) : 
 				?>
-				<div class="recent-related">
+				<div class="recent-related mb-3">
 					<h3>Bài Viết Liên Quan</h3>
 				</div>
 				<div class="post-related">
@@ -52,10 +52,10 @@ the_post();?>
 	                        <a href="<?php echo get_the_permalink(); ?>" class="single_blog">
 	                            <div class="single_blog_img">
 	                                <img src="<?php the_post_thumbnail_url(''); ?>" alt="">
-	                                <div class="blog_date text-center">
+	                                <!-- <div class="blog_date text-center">
 	                                    <div class="bd_day"><?php echo get_the_date( 'd' ) ?></div>
 	                                    <div class="bd_month"><?php echo get_the_date( 'M' ) ?></div>
-	                                </div>
+	                                </div> -->
 	                            </div>                
 	                            <div class="blog_content">  
 	                                <h4 class="post_title">

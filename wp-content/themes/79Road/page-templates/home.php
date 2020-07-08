@@ -282,11 +282,11 @@
                         <a href="<?php echo get_the_permalink(); ?>" class="single_blog">
                             <div class="single_blog_img">
                                 <img src="<?php the_post_thumbnail_url(''); ?>" alt="">
-                                <div class="blog_date text-center">
+                                <!-- <div class="blog_date text-center">
                                     <div class="bd_day"><?php echo get_the_date( 'd' ) ?></div>
                                     <div class="bd_month"><?php echo get_the_date( 'M' ) ?></div>
-                                </div>
-                            </div>                
+                                </div> -->
+                            </div>
                             <div class="blog_content">  
                                 <h4 class="post_title">
                                     <?php the_title(); ?>

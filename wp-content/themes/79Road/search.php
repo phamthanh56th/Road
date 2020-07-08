@@ -1,6 +1,25 @@
 <?php get_header(); ?>
+<div id="page_item_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-left">
+                <h3 class="search-title"><?php printf( __( 'Kết Quả Tìm Kiếm: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="woocomerce-detail">
 	<div class="container">
+        <div class="col-12 mb-5">
+            <div class="search-box">
+                <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <div class="input-group">
+                        <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" class="form-control"  placeholder="Tìm kiếm"/>              
+                        <button type="submit" id="searchsubmit" class="btn btn-default"><i class="fa fa-search"></i></button>     
+                    </div>
+                </form>
+            </div>
+        </div>
 		<?php
 		    global $query_string;
 		    $query_args = explode("&", $query_string);
@@ -19,9 +38,6 @@
 		    ?>
 		    <!-- the loop -->
 		    <div class="row">
-                <div class="col-md-12">
-                    <h1 class="search-title"><?php printf( __( 'Kết Quả Tìm Kiếm: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-                </div>
 		    	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 		    		<?php $price = get_post_meta( get_the_ID(), '_regular_price', true);
                     $pid = $post->ID;
@@ -58,8 +74,10 @@
 		    <!-- end of the loop -->
 		    <?php wp_reset_postdata(); ?>
 
-		<?php else : ?>
-		    <p><?php _e( 'Sorry, no posts matched your criteria--' ); ?></p>
+        <?php else : ?>
+            <div class="col-12">
+                <p><?php _e( 'Sản phẩm bạn tìm kiếm không có.' ); ?></p>
+            </div>
 		<?php endif; ?>
 	</div>
 </div>
