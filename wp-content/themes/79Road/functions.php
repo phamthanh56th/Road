@@ -5,7 +5,7 @@
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' ); 
 	add_theme_support( 'wc-product-gallery-lightbox' ); 
-	 add_theme_support( 'wc-product-gallery-slider' ); 
+	add_theme_support( 'wc-product-gallery-slider' ); 
 	add_image_size( 'custom-size', 100, 100, true );
 
 
@@ -328,3 +328,10 @@
     wc_setcookie( 'woocommerce_recently_viewed', implode( '|', $viewed_products ) );
 	} 
 	add_action( 'template_redirect', 'giniit_track_product_view', 20 );
+
+
+
+	//disable button add to cart in single product
+	add_filter( 'woocommerce_is_purchasable', '__return_false'); // DISABLING PURCHASE FUNCTIONALITY AND REMOVING ADD TO CART BUTTON FROM NORMAL PRODUCTS
+	remove_action('woocommerce_single_variation', 'woocommerce_single_variation', 10); // REMOVING PRICE FROM VARIATIONS
+	remove_action('woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20); // REMOVING ADD TO CART BUTTON FROM VARIATIONS
