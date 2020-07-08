@@ -3381,6 +3381,26 @@ body.home .header_top_area .hdr_tp_right i.fa-caret-down {
     right: 0;
 }
 
+.product_meta > span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.product_meta > span:last-child {
+	margin-bottom: 0;
+}
+
+form.cart {
+	display: none !important;
+}
+
+.woocommerce div.product .stock {
+	color: #D62027 !important;
+    font-size: 15px !important;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
 @media(min-width: 768px) {
 	body.home #header_area {
 		position: absolute;
