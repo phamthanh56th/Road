@@ -1645,7 +1645,6 @@ header .logo img {
 }
 .single_blog .blog_content {
 	display: inline-block;
-	padding: 10px 30px 10px;
     min-height: 84px;
 }
 .blog_content h6 {
@@ -3401,7 +3400,14 @@ form.cart {
 	margin-bottom: 10px;
 }
 
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	display: flex;
+}
+
 @media(min-width: 768px) {
+	.single_blog .blog_content {
+		padding: 0 30px 10px;
+	}
 	body.home #header_area {
 		position: absolute;
 		top: 0;
@@ -3456,7 +3462,7 @@ form.cart {
 		z-index: -999;
 		transition: .5s;
 	}
-	.main-menu nav > ul > li:hover .sub-menu {
+	.main-menu nav > ul > li:hover > .sub-menu {
 		opacity: 1;
 		top: 100%;
 		visibility: visible;
@@ -3473,6 +3479,11 @@ form.cart {
 	}
 	.sub-menu li a:hover {
 		padding-left: 18px;
+	}
+
+	.menu-item-has-children > a::after {
+		content: '';
+		position: absolute;
 	}
 
 	body.home .header_top_area {
