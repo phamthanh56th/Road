@@ -198,7 +198,7 @@ jQuery(document).ready(function(){
                 settings: "unslick"
             },
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
