@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/venobox.css" />
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/fonts/fontawesome-pro/css/all.min.css" />
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/bootstrap.min.css" />  
+    <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/slick.css" />
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/style.css" />
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/responsive.css?v=<?php echo time(); ?>" /> 
     <link rel="stylesheet" href="<?php echo bloginfo('template_directory');?>/css/customsize.css?v=<?php echo time(); ?>" />

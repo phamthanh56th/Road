@@ -91,6 +91,7 @@
         <script src="<?php echo bloginfo('template_directory');?>/js/venobox.min.js"></script>
         <script src="<?php echo bloginfo('template_directory');?>/js/owl.carousel.min.js"></script>
         <script src="<?php echo bloginfo('template_directory');?>/js/simplePlayer.js"></script>
+        <script src="<?php echo bloginfo('template_directory');?>/js/slick.min.js"></script>
 
         <script src="<?php echo bloginfo('template_directory');?>/js/main.js"></script>
     </body>

@@ -265,7 +265,7 @@
                     </div>
                 </div>          
                 
-                <div class="row">   
+                <div class="row slide-mobile">   
                     <?php  
                         $args=array(
                         'post_type' => 'post',
