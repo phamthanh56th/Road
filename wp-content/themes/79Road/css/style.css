@@ -3473,11 +3473,8 @@ form.cart {
 
 	/* Sub Menu */
 	.sub-menu {
-		background: #fff none repeat scroll 0 0;
-		box-shadow: 0 0px 7px rgba(0,0,0,0.05);
 		border: 1px solid rgba(0,0,0,0.04);
 		opacity: 0;
-		padding: 12px 11px;
 		position: absolute;
 		text-align: left;
 		top: 120px;
@@ -3485,13 +3482,66 @@ form.cart {
 		width: 200px;
 		z-index: -999;
 		transition: .5s;
+		border-radius: 8px;
+		background: #fcf9f9;
+		-moz-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
+		-webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
+		box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
 	}
-	.main-menu nav > ul > li:hover > .sub-menu {
+
+	.main-menu nav > ul > li > .sub-menu::after {
+		content: '';
+		border-top: 8px solid transparent;
+		border-left: 8px solid transparent;
+		border-bottom: 8px solid #fcf9f9;
+		border-right: 8px solid transparent;
+		position: absolute;
+		top: -16px;
+		left: 0;
+		right: 50%;
+		margin: auto;
+		width: 10px;
+		display: block !important;
+	}
+	.main-menu nav > ul li:hover > .sub-menu {
 		opacity: 1;
-		top: 100%;
+		top: 102%;
 		visibility: visible;
 		z-index: 999;
 	}
+
+	.main-menu nav > ul li:hover > .sub-menu > li {
+		position: relative;
+		padding: 12px 11px;
+	}
+
+	.main-menu nav > ul li:hover > .sub-menu > li.menu-item-has-children::after {
+		content: '';
+		position: absolute;
+		background-image: url(../img/icon/arrow.png);
+		height: 20px;
+		width: 20px;
+		right: 5px;
+		top: 17px;
+		background-position: center center;
+		background-size: 100%;
+		transform: rotate(-90deg);
+	}
+
+	.main-menu nav > ul > li > .sub-menu > li > ul {
+		opacity: 1;
+		top: 10px !important;
+		z-index: 999;
+		left: calc(100% + 1px);
+		transition: 0s all;
+		display: none;
+	}
+
+	.main-menu nav > ul > li > .sub-menu > li:hover > ul {
+		visibility: visible;
+		display: block;
+	}
+
 	.sub-menu li a {
 		color: #606060;
 		display: block;
@@ -3532,6 +3582,10 @@ form.cart {
 }
 
 @media(max-width: 767px) {
+	.product_filter ul li {
+		margin-bottom: 10px;
+	}
+	
 	.slide-mobile .single_blog {
 		margin-bottom: 0;
 	}
